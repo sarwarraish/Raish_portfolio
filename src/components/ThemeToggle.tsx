@@ -38,12 +38,12 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={handleThemeToggle}
-      className="rounded-full border border-teal text-teal hover:bg-teal/10 transition-all duration-300"
+      className="rounded-full border border-teal shadow-md hover:shadow-teal/20 transition-all duration-300 dark:bg-navy/80 dark:hover:bg-navy/60 bg-white hover:bg-teal/5"
     >
       {theme === "dark" ? (
-        <Sun className="h-5 w-5" />
+        <Sun className="h-5 w-5 text-teal" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5 text-navy" />
       )}
     </Button>
   );

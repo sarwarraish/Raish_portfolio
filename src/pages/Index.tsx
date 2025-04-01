@@ -42,12 +42,12 @@ const Index = () => {
     >
       <Button
         onClick={() => setAdminPanelOpen(true)}
-        className="bg-navy border border-teal text-teal hover:bg-navy/80 rounded-full h-12 w-12 flex items-center justify-center shadow-lg shadow-teal/20"
+        className="bg-gradient-to-r from-navy to-lightNavy border border-teal text-teal hover:bg-navy/80 rounded-full h-14 w-14 flex items-center justify-center shadow-lg shadow-teal/20"
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          width="20" 
-          height="20" 
+          width="24" 
+          height="24" 
           viewBox="0 0 24 24" 
           fill="none" 
           stroke="currentColor" 
@@ -77,47 +77,54 @@ const Index = () => {
         <Experience />
         
         {/* Featured Testimonials Carousel */}
-        <section className="py-16 px-6 md:px-12 bg-gradient-to-br from-navy to-lightNavy text-white">
+        <section className="py-16 px-6 md:px-12 bg-gradient-to-br from-navy to-lightNavy dark:from-[#121212] dark:to-[#1a1a2e] text-white">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-lightSlate">
-                <span className="text-teal mr-2">04b.</span> Testimonials
+                <span className="text-gradient bg-gradient-to-r from-teal to-blue-400 bg-clip-text text-transparent mr-2">04b.</span> Testimonials
               </h2>
-              <div className="h-px bg-navy flex-grow ml-4"></div>
+              <div className="h-px bg-gradient-to-r from-teal/50 to-transparent flex-grow ml-4"></div>
             </div>
             
             <p className="text-slate mb-10 max-w-2xl">
               What others have said about working with me
             </p>
             
-            <Carousel className="w-full max-w-4xl mx-auto">
+            <Carousel className="w-full max-w-5xl mx-auto">
               <CarouselContent>
                 {[
                   { 
                     author: "Sarah Johnson", 
                     role: "Project Manager", 
                     company: "TechCorp",
-                    text: "One of the most dedicated developers I've worked with. Consistently delivers high-quality code ahead of deadlines and is always eager to learn new technologies."
+                    text: "One of the most dedicated developers I've worked with. Consistently delivers high-quality code ahead of deadlines and is always eager to learn new technologies.",
+                    badgeType: "success"
                   },
                   { 
                     author: "Michael Chen", 
                     role: "Senior Developer", 
                     company: "WebSolutions Inc",
-                    text: "Exceptional problem-solving skills. Approaches complex challenges with a methodical mindset and always finds elegant solutions while maintaining clean code practices."
+                    text: "Exceptional problem-solving skills. Approaches complex challenges with a methodical mindset and always finds elegant solutions while maintaining clean code practices.",
+                    badgeType: "info"
                   },
                   { 
                     author: "Priya Sharma", 
                     role: "UI/UX Designer", 
                     company: "DesignHub",
-                    text: "A true collaborator who bridges the gap between design and implementation. Takes feedback constructively and implements UI changes with pixel-perfect precision."
+                    text: "A true collaborator who bridges the gap between design and implementation. Takes feedback constructively and implements UI changes with pixel-perfect precision.",
+                    badgeType: "elite"
                   }
                 ].map((testimonial, index) => (
                   <CarouselItem key={index}>
-                    <div className="p-6 md:p-8 bg-gradient-to-br from-lightNavy to-navy border border-teal/20 rounded-lg shadow-xl">
-                      <div className="mb-4">
+                    <div className="p-6 md:p-8 bg-gradient-to-br from-lightNavy/50 to-navy/50 dark:from-[#1a1a2e]/70 dark:to-[#121212]/70 backdrop-blur-sm border border-teal/20 rounded-lg shadow-xl">
+                      <div className="mb-4 flex">
                         {[...Array(5)].map((_, i) => (
-                          <span key={i} className="text-yellow-400 text-lg">★</span>
+                          <span key={i} className="text-yellow-400 text-lg mr-1">★</span>
                         ))}
+                        <Badge variant={testimonial.badgeType as any} className="ml-auto">
+                          {testimonial.badgeType === "success" ? "Team Lead" : 
+                           testimonial.badgeType === "info" ? "Technical" : "Design"}
+                        </Badge>
                       </div>
                       <blockquote className="text-lg md:text-xl italic mb-6 text-lightSlate">
                         "{testimonial.text}"
@@ -150,7 +157,6 @@ const Index = () => {
       </main>
       <Footer />
       <AdminToggle />
-      <AdminPanel isOpen={adminPanelOpen} onClose={() => setAdminPanelOpen(false)} />
       <div className="fixed top-6 right-6 z-40">
         <ThemeToggle />
       </div>
