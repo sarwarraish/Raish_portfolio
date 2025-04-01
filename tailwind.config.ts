@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				navy: "#0a192f",
+				teal: "#64ffda",
+				slate: "#8892b0",
+				lightSlate: "#ccd6f6",
+				lightNavy: "#112240",
+				navyShadow: "rgba(2, 12, 27, 0.7)",
+			},
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+				poppins: ["Poppins", "sans-serif"],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +95,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				fadeIn: {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				fadeInLeft: {
+					'0%': { opacity: '0', transform: 'translateX(-20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				fadeInRight: {
+					'0%': { opacity: '0', transform: 'translateX(20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				wave: {
+					'0%': { transform: 'rotate(0.0deg)' },
+					'10%': { transform: 'rotate(14.0deg)' },
+					'20%': { transform: 'rotate(-8.0deg)' },
+					'30%': { transform: 'rotate(14.0deg)' },
+					'40%': { transform: 'rotate(-4.0deg)' },
+					'50%': { transform: 'rotate(10.0deg)' },
+					'60%': { transform: 'rotate(0.0deg)' },
+					'100%': { transform: 'rotate(0.0deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fadeIn': 'fadeIn 0.7s ease-out forwards',
+				'fadeInLeft': 'fadeInLeft 0.7s ease-out forwards',
+				'fadeInRight': 'fadeInRight 0.7s ease-out forwards',
+				'wave': 'wave 2.5s infinite'
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
