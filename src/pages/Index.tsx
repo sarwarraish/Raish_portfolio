@@ -11,6 +11,7 @@ import HireMe from "@/components/HireMe";
 import Footer from "@/components/Footer";
 import AdminPanel from "@/components/AdminPanel";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   const [adminPanelOpen, setAdminPanelOpen] = useState(false);
@@ -44,18 +45,21 @@ const Index = () => {
   return (
     <div className="bg-navy min-h-screen">
       <Header />
-      <main>
+      <main className="overflow-hidden">
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Experience />
-        <Contact />
         <HireMe />
+        <Contact />
       </main>
       <Footer />
       <AdminToggle />
       <AdminPanel isOpen={adminPanelOpen} onClose={() => setAdminPanelOpen(false)} />
+      <div className="fixed top-6 right-6 z-40">
+        <ThemeToggle />
+      </div>
     </div>
   );
 };
