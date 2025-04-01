@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function ThemeToggle() {
   const { toast } = useToast();
@@ -34,17 +35,39 @@ export function ThemeToggle() {
   };
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      onClick={handleThemeToggle}
-      className="rounded-full border border-teal shadow-md hover:shadow-teal/20 transition-all duration-300 dark:bg-navy/80 dark:hover:bg-navy/60 bg-white hover:bg-teal/5"
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
-      {theme === "dark" ? (
-        <Sun className="h-5 w-5 text-teal" />
-      ) : (
-        <Moon className="h-5 w-5 text-navy" />
-      )}
-    </Button>
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={handleThemeToggle}
+        className="relative overflow-hidden rounded-full border border-purple-500/50 shadow-lg hover:shadow-purple-500/20 transition-all duration-300 dark:bg-navy/80 dark:hover:bg-navy/60 bg-white hover:bg-purple-100/20"
+      >
+        {theme === "dark" ? (
+          <>
+            <Sun className="h-5 w-5 text-yellow-400" />
+            <motion.span 
+              className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"
+              animate={{ 
+                rotate: [0, 360],
+                opacity: [0, 0.2, 0]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity,
+                repeatType: "loop" 
+              }}
+            />
+          </>
+        ) : (
+          <>
+            <Moon className="h-5 w-5 text-indigo-600" />
+            <Sparkles className="absolute h-3 w-3 text-yellow-300 top-1 right-1 opacity-70" />
+          </>
+        )}
+      </Button>
+    </motion.div>
   );
 }

@@ -17,19 +17,19 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground",
         gradient: 
-          "border-transparent bg-gradient-to-r from-teal to-blue-400 text-navy shadow hover:opacity-90 dark:text-white",
+          "border-transparent bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow hover:opacity-90 dark:text-white",
         success:
-          "border-transparent bg-gradient-to-r from-green-400 to-emerald-500 text-white shadow hover:opacity-90",
+          "border-transparent bg-gradient-to-r from-emerald-400 to-green-500 text-white shadow hover:opacity-90",
         info:
-          "border-transparent bg-gradient-to-r from-blue-400 to-indigo-500 text-white shadow hover:opacity-90",
+          "border-transparent bg-gradient-to-r from-blue-400 to-cyan-500 text-white shadow hover:opacity-90",
         warning:
           "border-transparent bg-gradient-to-r from-amber-400 to-orange-500 text-navy shadow hover:opacity-90 dark:text-white",
         elite: 
-          "border-transparent bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow hover:opacity-90",
+          "border-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white shadow hover:opacity-90",
         premium: 
           "border-transparent bg-gradient-to-r from-yellow-400 to-amber-600 text-navy shadow hover:opacity-90 dark:text-white",
         creative: 
-          "border-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow hover:opacity-90",
+          "border-transparent bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white shadow hover:opacity-90",
       },
     },
     defaultVariants: {
