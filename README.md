@@ -1,73 +1,45 @@
-# Welcome to your Lovable project
+# 👋 Hi, I'm Md Sarwar Raish
 
-## Project info
+🎓 Recent B.Tech graduate in Computer Science & Engineering (JNTU Hyderabad)  
+🔐 Passionate about Cybersecurity, Software Development & Problem Solving  
+📍 Based in Bengaluru | Open to work in Delhi/NCR or Remote  
+💡 Currently exploring TryHackMe, OWASP Top 10, and Java backend development
 
-**URL**: https://lovable.dev/projects/48f87171-713f-41d9-9e6c-a9a6ffd186c6
+---
 
-## How can I edit this code?
+## 🛠 Tech Stack
+- 💻 Languages: Java, Python, JavaScript
+- 🌐 Web: HTML5, CSS3, JSP, Spring Boot, Servlets
+- 🧠 CS Fundamentals: DSA, OS (Unix), Networking, SDLC
+- 🛢 Databases: Oracle (PL/SQL), MySQL
+- 🔧 Tools: Git, GitHub, VS Code, Eclipse, IntelliJ, Apache Tomcat
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🔨 Projects
+- 🔐 **[Biometric-Based Cloud Access System](#)**  
+  Secure login using biometric data for accessing cloud services (Java, MySQL, Tomcat)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/48f87171-713f-41d9-9e6c-a9a6ffd186c6) and start prompting.
+- 👀 **[Facial Expression Recognition (YOLOv2)](#)**  
+  Real-time emotion detection using YOLO and Flask (Python, MySQL)
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🧪 **[TryHackMe Writeups](#)**  
+  Rooms on OWASP, Networking, Wireshark, and beginner-friendly labs
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 What I'm Learning
+- TryHackMe (Network Security, Web Exploits)
+- OWASP Top 10, Burp Suite
+- Penetration Testing & SOC Fundamentals
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📫 Connect With Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sarwarraish)  
+📧 Email: sarwarraish98@gmail.com  
+🌐 Portfolio: Coming Soon!
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/48f87171-713f-41d9-9e6c-a9a6ffd186c6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+⭐ **Feel free to check out my repositories and connect—I'm always open to collaboration, internships, and learning together!**
